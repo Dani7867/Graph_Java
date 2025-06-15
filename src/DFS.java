@@ -1,11 +1,11 @@
 public class DFS {
 
-    public static void  DFSTravel(int node , AdjacencyMapGraph graph , int v , boolean[] isVisited){
+    public static void  DFSTravel(int node , AdjacencyMapGraph graph , boolean[] isVisited){
         System.out.print(node+" ");
         isVisited[node] = true;
         for (int neighbour : graph.getNeighbors(node)){
             if(!isVisited[neighbour]){
-                DFSTravel(neighbour,graph,v,isVisited);
+                DFSTravel(neighbour,graph,isVisited);
             }
         }
     } // Time Complexity: O(V + E) Space Complexity: O(V + E) same as BFS when using Adj List.
@@ -16,6 +16,6 @@ public class DFS {
         graph.graphFromEdges(edges);
         boolean[] isVisited = new boolean[5];
         System.out.print("DFS Traversal:");
-        DFSTravel(0,graph,5,isVisited);
+        DFSTravel(0,graph,isVisited);
     }
 }
