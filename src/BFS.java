@@ -20,7 +20,7 @@ public class BFS {
                 }
             }
         }
-    }
+    } // Time Complexity: O(V + E) Space Complexity: O(V + E)
     public static void main(String[] args) {
         AdjacencyMapGraph graph = new AdjacencyMapGraph(5,false);
         int[][] edges = {{0,1},{1,4},{1,2},{2,3}};
