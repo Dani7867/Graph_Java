@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -53,6 +54,10 @@ public class AdjacencyMapGraph {
             int u = edge[0], v = edge[1];
             addEdge(u, v);
         }
+    }
+
+    public List<Integer> getNeighbors(int node) {
+        return adjMap.getOrDefault(node, new ArrayList<>());
     }
 
     /**
