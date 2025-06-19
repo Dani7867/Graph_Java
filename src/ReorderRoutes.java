@@ -9,8 +9,8 @@ public class ReorderRoutes {
         }
         for(int[] ne : connections){
             int u = ne[0] , v = ne[1];
-            graph.get(u).add(new int[]{v,1});
-            graph.get(v).add(new int[]{u,0});
+            graph.get(u).add(new int[]{v,1}); // edge present
+            graph.get(v).add(new int[]{u,0}); // added edge
         }
 
         boolean[] isVisited = new boolean[n];
